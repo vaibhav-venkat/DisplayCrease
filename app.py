@@ -100,6 +100,5 @@ app.layout = html.Div(
 
 register_load_data_callbacks(app)
 register_plotting_callbacks(app)
-
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=7860, debug=False)
