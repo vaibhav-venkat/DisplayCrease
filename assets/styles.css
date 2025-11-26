@@ -1,0 +1,290 @@
+body {
+  margin: 0;
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  background-color: #f5f7fb;
+  color: #1f2933;
+}
+
+#app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  background: linear-gradient(135deg, #1d4ed8 0%, #312e81 100%);
+  color: #ffffff;
+  padding: 24px 32px;
+  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.3);
+}
+
+.app-title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.app-subtitle {
+  margin: 8px 0 0;
+  font-size: 16px;
+  opacity: 0.85;
+}
+
+.content-wrapper {
+  flex: 1;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.sidebar {
+  width: 320px;
+  min-width: 280px;
+  max-width: 320px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.sidebar-section-title {
+  margin-bottom: 4px;
+  font-weight: 600;
+  color: #1d4ed8;
+}
+
+.sidebar-label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.upload-area {
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  border: 2px dashed #93c5fd;
+  border-radius: 12px;
+  text-align: center;
+  color: #1e3a8a;
+  background-color: #eff6ff;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.upload-area:hover {
+  background-color: #dbeafe;
+}
+
+.upload-feedback {
+  font-size: 13px;
+  color: #1f2937;
+}
+
+.config-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px 10px;
+  width: 100%;
+  max-width: 100%;
+}
+
+@media (max-width: 400px) {
+  .config-grid {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+}
+
+.number-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0; /* Allow shrinking */
+}
+
+.number-input-group label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #374151;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.number-input {
+  border: 1px solid #cbd5f5;
+  border-radius: 6px;
+  padding: 4px 6px;
+  font-size: 13px;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  margin-top: 4px;
+  gap: 6px;
+}
+
+.checkbox-label input[type="checkbox"] {
+  margin: 0;
+}
+
+.sidebar-dropdown {
+  width: 100%;
+}
+
+.sidebar-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.primary-btn {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  background-color: #4338ca;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.primary-btn:disabled {
+  background-color: #94a3b8;
+  cursor: not-allowed;
+}
+
+.primary-btn:hover:not(:disabled) {
+  background-color: #3730a3;
+}
+
+.status-text {
+  font-size: 13px;
+  min-height: 20px;
+  color: #1f2937;
+}
+
+.main-content {
+  flex: 1;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 16px 20px 24px;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.tab-content {
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: 520px;
+}
+
+/* Override any jsx or CSS-in-JS classes that might add unwanted spacing */
+[class*="jsx-"] .tab-content,
+div[class*="jsx-"].tab-content {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: auto !important;
+  min-height: auto !important;
+}
+
+.tab-content > * {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Ensure all graphs and content containers have no unwanted spacing */
+.dash-graph {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.data-summary-grid {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Force override any inherited spacing */
+.tab-content,
+.tab-content * {
+  box-sizing: border-box !important;
+}
+
+/* Specifically target the problematic jsx class */
+.jsx-4017309047.tab-content {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: auto !important;
+  min-height: auto !important;
+}
+
+.data-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.data-summary-card {
+  background: #f1f5f9;
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #e2e8f0;
+}
+
+.log-container {
+  background: #0f172a;
+  color: #f8fafc;
+  padding: 16px;
+  border-radius: 12px;
+  font-family: "Source Code Pro", monospace;
+  font-size: 13px;
+  height: 520px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  box-shadow: inset 0 0 10px rgba(15, 23, 42, 0.6);
+}
+
+.results-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+.results-section {
+  background-color: #f8fafc;
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid #e2e8f0;
+}
+
+.summary-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.summary-table th,
+.summary-table td {
+  border: 1px solid #e2e8f0;
+  padding: 8px;
+  text-align: left;
+}
+
+.summary-table th {
+  background-color: #eff6ff;
+}

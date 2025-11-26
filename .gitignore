@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+.env
+
+# macOS
+.DS_Store
+
+# Dash / runtime outputs (ephemeral)
+uploads/
+outputs/
+*.log
+
+# Large model files (if you keep them locally, don't push them)
+models/*.bin
+models/*.pkl
+models/*.json
+# Jupyter
+.ipynb_checkpoints/
+
+# Test / cache
+.pytest_cache/
+
+# Git internals
+.git/
