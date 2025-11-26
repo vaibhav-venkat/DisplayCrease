@@ -10,9 +10,9 @@ def _build_header() -> html.Div:
     return html.Div(
         className="app-header",
         children=[
-            html.H1("CREASE-2D Integrated Workbench", className="app-title"),
+            html.H1("DisplayCREASE", className="app-title"),
             html.P(
-                "Unified interface for scattering data analysis, model selection, and GA optimization",
+                "Visualizing Crease data",
                 className="app-subtitle",
             ),
         ],
